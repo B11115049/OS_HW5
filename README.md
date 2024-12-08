@@ -1,6 +1,6 @@
 # OS_HW5
 
-## lab1: ejecing CD-ROM via ioctl
+## lab1: Ejecing CD-ROM via ioctl
 
 ### test 
 
@@ -14,3 +14,5 @@ sudo umount /dev/cdrom
 ./ioctl_eject
 
 ```
+
+## lab2: Linux Kernel Driver
