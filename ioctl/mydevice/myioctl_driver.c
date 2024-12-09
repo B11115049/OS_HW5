@@ -9,7 +9,7 @@
 #define MYIOCTL_INCREMENT _IOW(MYIOCTL_MAGIC, 2, int)
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("B11115049");
+MODULE_AUTHOR("IAN");
 MODULE_DESCRIPTION("IOCTL Example");
 
 static int myioctl_major;
@@ -18,6 +18,7 @@ static int count = 0;
 
 static int myioctl_open(struct inode *inode, struct file *filp);
 static int myioctl_release(struct inode *inode, struct file *filp);
+
 static long myioctl_ioctl(struct file *filp, unsigned int cmd, unsigned long arg);
 
 

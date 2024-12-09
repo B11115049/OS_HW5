@@ -25,7 +25,7 @@ sudo apt-get update
 sudo apt-get install gcc-12 g++-12
 ```
 
-### test
+### pre do
 
 ```
 cd ioctl/mydevice
@@ -35,4 +35,29 @@ make
 sudo insmod myioctl_driver.ko
 
 sudo dmesg | tail
+
+sudo mknod /dev/myioctl c 241 0
+
+sudo chmod 666 /dev/myioctl
+
+ls -alh /dev/myioctl
+```
+
+### test
+
+```
+./myioctl_app
+
+sudo dmesg | tail
+
+./myioctl_app
+```
+
+## LAB2-EXT: Linux Kernel Driver - Reset Counter Value
+
+### test
+
+```
+cd ioctl/mydevice
+./myioctl_app
 ```
