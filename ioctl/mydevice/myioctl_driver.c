@@ -16,7 +16,7 @@ static int myioctl_major;
 static int count = 0;
 
 
-static int muioctl_open(struct inode *inode, struct file *filp);
+static int myioctl_open(struct inode *inode, struct file *filp);
 static int myioctl_release(struct inode *inode, struct file *filp);
 static long myioctl_ioctl(struct file *filp, unsigned int cmd, unsigned long arg);
 
@@ -25,7 +25,7 @@ static const struct file_operations myioctl_fops = {
     .open = myioctl_open,
     .release = myioctl_release,
     .unlocked_ioctl = myioctl_ioctl,
-}
+};
 
 static int __init myioctl_init(void) {
     myioctl_major = register_chrdev(0, "myioctl", &myioctl_fops);
@@ -39,7 +39,7 @@ static int __init myioctl_init(void) {
     return 0;
 }
 
-static void __exit muioctl_exit(void) {
+static void __exit myioctl_exit(void) {
     unregister_chrdev(myioctl_major, "myioctl");
     pr_info("myioctl module unloaded\n");
 }

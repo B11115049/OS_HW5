@@ -1,0 +1,1 @@
+savedcmd_/home/nachos/hw5/OS_HW5/ioctl/mydevice/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/nachos/hw5/OS_HW5/ioctl/mydevice/Module.symvers -T /home/nachos/hw5/OS_HW5/ioctl/mydevice/modules.order -i Module.symvers -e 

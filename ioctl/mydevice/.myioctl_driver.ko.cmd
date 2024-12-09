@@ -1,0 +1,1 @@
+savedcmd_/home/nachos/hw5/OS_HW5/ioctl/mydevice/myioctl_driver.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/nachos/hw5/OS_HW5/ioctl/mydevice/myioctl_driver.ko /home/nachos/hw5/OS_HW5/ioctl/mydevice/myioctl_driver.o /home/nachos/hw5/OS_HW5/ioctl/mydevice/myioctl_driver.mod.o
