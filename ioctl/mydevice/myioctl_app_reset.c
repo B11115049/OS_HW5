@@ -21,8 +21,6 @@ int main() {
     ioctl(fd, MYIOCTL_GET_COUNT, &counter_value);
     printf("Current counter value: %d\n", counter_value);
 
-    int reset_value;
-
     ioctl(fd, MYIOCTL_RESET);
 
     ioctl(fd, MYIOCTL_GET_COUNT, &counter_value);
