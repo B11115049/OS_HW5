@@ -21,18 +21,12 @@ int main() {
     ioctl(fd, MYIOCTL_GET_COUNT, &counter_value);
     printf("Current counter value: %d\n", counter_value);
 
-    int increment_value;
-    printf("Enter the value to increment the counter: ");
-    if(scanf("%d", &increment_value) != 1) {
-        perror("Error reding input");
-        close(fd);
-        return -1;
-    }
+    int reset_value;
 
-    ioctl(fd, MYIOCTL_INCREMENT, &increment_value);
+    ioctl(fd, MYIOCTL_RESET);
 
     ioctl(fd, MYIOCTL_GET_COUNT, &counter_value);
-    printf("Updated counter value: %d\n", counter_value);
+    printf("Reset counter value: %d\n", counter_value);
 
     close(fd);
     
